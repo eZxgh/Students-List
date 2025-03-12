@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentsList.Views.StudentsView"
+             xmlns:local="clr-namespace:StudentsList.Views"
+             Title="StudentsView">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Resources/Styles/style.css" />
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="HappyNumberLabel" StyleId="HappyNumberLabel" Text="Szczęśliwy numerek: " HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Column="0" HorizontalOptions="Start" Spacing="20">
+            <Label Text="Imie:" HorizontalOptions="Start" StyleId="pageLabel"/>
+            <Editor x:Name="studentName"
+                StyleId="studentName"
+                Placeholder="Imie..."
+                HorizontalOptions="Start"/>
+
+            <Label Text="Nazwisko: " HorizontalOptions="Start" StyleId="pageLabel"/>
+            <Editor x:Name="studentLastName"
+                StyleId="studentLastName"
+                Placeholder="Nazwisko..."
+                HorizontalOptions="Start"/>
+
+            <Label Text="Klasa:" HorizontalOptions="Start" StyleId="pageLabel"/>
+            <Editor x:Name="studentsClass"
+                StyleId="studenClass"
+                Placeholder="Klasa..."
+                HorizontalOptions="Start"/>
+
+            <Label Text="Numer:" HorizontalOptions="Start" StyleId="pageLabel"/>
+            <Editor x:Name="studentNumber"
+                StyleId="studentNumber"
+                Keyboard="Numeric"
+                Placeholder="Numer..."
+                HorizontalOptions="Start"/>
+
+            <HorizontalStackLayout HorizontalOptions="Start">
+                <Button 
+                    StyleId="addBtn"
+                    Text="Dodaj ucznia"
+                    HorizontalOptions="Start"
+                    TextColor="White"
+                    Clicked="onStudentAddClicked"/>
+
+                <Button 
+                    StyleId="randomStudentBtn"
+                    Text="Losuj"
+                    HorizontalOptions="Start"
+                    TextColor="White"
+                    Clicked="onGetRandomStudentClicked"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout HorizontalOptions="Start" Spacing="10" ClassId="fileButtons">
+                <Button 
+                    StyleId="importBtn"
+                    Text="Import"
+                    TextColor="white"
+                    Clicked="onImportListClicked"/>
+
+                <Button 
+                    StyleId="exportBtn"
+                    Text="Export"
+                    TextColor="white"
+                    Clicked="onExportListClicked"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+
+        <ScrollView Grid.Column="1">
+            <StackLayout StyleId="StudentsContainer" x:Name="StudentsContainer" Spacing="10">
+                <CollectionView ItemsSource="{Binding Students}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame ClassId="studentBox">
+                                <HorizontalStackLayout VerticalOptions="Center" Spacing="10">
+                                    <StackLayout>
+                                        <Label Text="{Binding Name, StringFormat='Imię: {0}'}" FontAttributes="Bold" FontSize="16" />
+                                        <Label Text="{Binding LastName, StringFormat='Nazwisko: {0}'}" FontSize="14" />
+                                        <Label Text="{Binding Number, StringFormat='Numer: {0}'}" FontSize="14" />
+                                        <Label Text="{Binding StudentClass, StringFormat='Klasa: {0}'}" FontSize="14" />
+                                    </StackLayout>
+
+                                    <Button 
+                                      x:Name="DeleteButton"
+                                      StyleId="deleteBtn"
+                                      Text="Usuń" 
+                                      TextColor="White" 
+                                      Clicked="onStudentRemoveClicked"
+                                    />
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

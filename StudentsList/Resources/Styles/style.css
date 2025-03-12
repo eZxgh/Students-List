@@ -1,0 +1,103 @@
+﻿#exportBtn {
+    color: white;
+    background: #FFC0CB;
+    border-radius: 10;
+    height: 50;
+    padding: 10;
+    font-style: bold;
+    font-size: 16;
+}
+
+#importBtn {
+    color: white;
+    background: #ffA500;
+    height: 50;
+    padding: 10;
+    border-radius: 10;
+    font-style: bold;
+    font-size: 16;   
+}
+
+#addBtn {
+    background: #4CAF50;
+    height: 50;
+    padding: 10;
+    border-radius: 10;
+    font-style: bold;
+    font-size: 16;
+    margin: 5,10;
+}
+
+#randomStudentBtn {
+    background: purple;
+    height: 50;
+    padding: 10;
+    border-radius: 10;
+    font-style: bold;
+    font-size: 16;
+    margin: 5,10;
+    width: 100;
+}
+
+#studentName {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studentLastName {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studenClass {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studentNumber {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+grid{
+    padding: 10;
+}
+
+#studentBox {
+    padding: 10;
+    margin: 5;
+}
+
+#StudentsContainer{
+    margin:10;
+}
+
+#pageLabel {
+    margin: 5,0;
+}
+
+#fileButtons {
+    margin: 5,10;
+}
+
+#HappyNumberLabel {
+    font-size: 18;
+    font-style: bold;
+    margin: 200,0,0,0;
+}
+
+#deleteBtn{
+    width: 70;
+    height: 50;
+    font-size: 14;
+    background: red;
+    color:white;
+}
