@@ -48,14 +48,26 @@ build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/masta/source/repos/StudentsList/StudentsList/Views/AddClassPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Views.AddClassPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddClassPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddClassPage.xaml
+
 [C:/Users/masta/source/repos/StudentsList/StudentsList/Views/StudentsView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Views.StudentsView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\StudentsView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\StudentsView.xaml
 
-[C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/style.css]
+[C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/AddClassPage.css]
 build_metadata.AdditionalFiles.GenKind = Css
-build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Styles.style.css
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\style.css
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\style.css
+build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Styles.AddClassPage.css
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\AddClassPage.css
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\AddClassPage.css
+
+[C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/StudentView.css]
+build_metadata.AdditionalFiles.GenKind = Css
+build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Styles.StudentView.css
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\StudentView.css
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\StudentView.css

@@ -6,7 +6,6 @@ namespace StudentsList.Models
     {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string StudentClass { get; set; }
         public int Number { get; set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;

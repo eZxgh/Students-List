@@ -1,0 +1,84 @@
+﻿^contentpage {
+    padding: 10;
+    background-color: wheat;
+    -maui-shell-title: black;
+    -maui-shell-background: wheat;
+}
+
+#addBtn {
+    background: wheat;
+    height: 50;
+    padding: 10;
+    border-radius: 10;
+    font-style: bold;
+    font-size: 16;
+    margin: 5,10;
+}
+
+#randomStudentBtn {
+    background: wheat;
+    height: 50;
+    padding: 10;
+    border-radius: 10;
+    font-style: bold;
+    font-size: 16;
+    margin: 5,10;
+    width: 100;
+}
+
+#studentName {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studentLastName {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studenClass {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+#studentNumber {
+    width: 200;
+    height: 40;
+    margin: 5,0;
+    font-size: 14;
+}
+
+grid{
+    padding: 10;
+}
+
+#StudentsContainer{
+    margin:10;
+}
+
+#pageLabel {
+    margin: 5,0;
+}
+
+#deleteBtn {
+    width: 70;
+    height: 50;
+    font-size: 14;
+    background: red;
+    color: white;
+}
+
+#dataLabel {
+    font-size: 14;
+}
+
+#dataLabelName {
+    font-style: bold;
+    font-size: 15;
+}

@@ -450,6 +450,7 @@ C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\StudentsList.AssemblyInfoInputs.cache
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\StudentsList.AssemblyInfo.cs
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\StudentsList.csproj.CoreCompileInputs.cache
+C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\StudentsList.sourcelink.json
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Students.E70D2F7C.Up2Date
 C:\Users\masta\source\repos\StudentsList\StudentsList\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\StudentsList.dll

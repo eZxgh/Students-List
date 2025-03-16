@@ -1,0 +1,28 @@
+﻿^contentpage {
+    padding: 10;
+    background-color: wheat;
+    -maui-shell-title: black;
+    -maui-shell-background: wheat;
+}
+
+#classView {
+    margin: 100;
+    padding: 16;
+    -maui-orientation: horizontal;
+    -maui-spacing: 4;
+    background-color: wheat;
+    font-size: 20;
+    width: 600;
+}
+
+#addClassBtn {
+    width: 120;
+    height: 50;
+    background: wheat;
+    padding: 10;
+    font-style: bold;
+}
+
+#classNameLabel {
+    font-style: bold;
+}

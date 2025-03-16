@@ -1,23 +1,22 @@
-namespace StudentsList.Views;
-using CommunityToolkit.Maui.Storage;
 using StudentsList.Models;
 using System.Text.Json;
-using System.Text;
+
+namespace StudentsList.Views;
 
 public partial class StudentsView : ContentPage
 {
-    private static readonly FilePickerFileType TxtFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
-    {
-        { DevicePlatform.WinUI, new[] { ".txt" } }
-    });
+    private string _filePath => Path.Combine(FileSystem.AppDataDirectory, $"{SelectedClass.Name}_students.json");
 
-    private readonly string _filePath = Path.Combine(FileSystem.AppDataDirectory, "students.txt");
-    public StudentsView()
+    public ClassModel SelectedClass { get; set; }
+
+    public StudentsView(ClassModel selectedClass)
     {
         InitializeComponent();
+        SelectedClass = selectedClass;
         BindingContext = new Student();
         LoadStudents();
     }
+
     private void SaveStudents()
     {
         try
@@ -30,7 +29,7 @@ public partial class StudentsView : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("Błąd", $"Nie udało się zapisać listy uczniów: {ex.Message}", "OK");
+            DisplayAlert("Error", $"Failed to save students: {ex.Message}", "OK");
         }
     }
 
@@ -54,52 +53,43 @@ public partial class StudentsView : ContentPage
                             student.Students.Add(loadedStudent);
                         }
                     }
-
-                    getHappyNumber();
                 }
                 catch (Exception ex)
                 {
-                    DisplayAlert("Błąd", $"Nie udało się załadować listy uczniów: {ex.Message}", "OK");
+                    DisplayAlert("Error", $"Failed to load students: {ex.Message}", "OK");
                 }
             }
         }
     }
+
     private void onStudentAddClicked(object sender, EventArgs e)
     {
         string name = studentName.Text;
         string lastName = studentLastName.Text;
-        string studentClass = studentsClass.Text;
         string numberText = studentNumber.Text;
 
-        if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(numberText) || string.IsNullOrEmpty(studentClass))
+        if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(numberText))
         {
-            DisplayAlert("Błąd", "Wszystkie pola muszą być wypełnione.", "OK");
+            DisplayAlert("Error", "All fields must be filled.", "OK");
             return;
         }
 
-        if (!int.TryParse(numberText, out int number))
+        if (!int.TryParse(numberText, out int number) || number <= 0)
         {
-            DisplayAlert("Błąd", "Numer ucznia musi być liczbą całkowitą.", "OK");
+            DisplayAlert("Error", "Student number must be a positive integer.", "OK");
             return;
         }
 
-        if (number <= 0)
-        {
-            DisplayAlert("Błąd", "Numer ucznia nie może być mniejszy lub równy 0.", "OK");
-            return;
-        }
-
-        if(BindingContext is Student student)
+        if (BindingContext is Student student)
         {
             var newStudent = new StudentModel
             {
                 Name = name,
                 LastName = lastName,
-                StudentClass = studentClass,
-                Number = number,
+                Number = number
             };
 
-            var repeatedNumber = student.Students.Any(n => n.Number == newStudent.Number);
+            bool repeatedNumber = student.Students.Any(n => n.Number == newStudent.Number);
 
             if (!repeatedNumber)
             {
@@ -107,37 +97,15 @@ public partial class StudentsView : ContentPage
 
                 studentName.Text = string.Empty;
                 studentLastName.Text = string.Empty;
-                studentsClass.Text = string.Empty;
                 studentNumber.Text = string.Empty;
 
                 SaveStudents();
-
-                DisplayAlert("Sukces", "Uczeń został dodany do listy.", "OK");
+                DisplayAlert("Success", "Student added.", "OK");
             }
             else
             {
-                DisplayAlert("Uwaga", "Podany numer istnieje w liście i nie może się powtarzać.", "OK");
+                DisplayAlert("Warning", "This student number already exists in the list.", "OK");
             }
-        }    
-    }
-    private void getHappyNumber()
-    {
-        try
-        {
-            if (BindingContext is Student student && student.Students.Count > 0)
-            {
-                Random random = new Random();
-                var happyStudent = student.Students[random.Next(student.Students.Count)];
-                HappyNumberLabel.Text = $"Szczęśliwy numerek: {happyStudent.Number}";
-            }
-            else
-            {
-                HappyNumberLabel.Text = "Brak dostępnych numerków.";
-            }
-        }
-        catch (Exception ex)
-        {
-            DisplayAlert("Błąd", $"Wystąpił problem podczas losowania szczęśliwego numerka: {ex.Message}", "OK");
         }
     }
 
@@ -145,84 +113,30 @@ public partial class StudentsView : ContentPage
     {
         try
         {
-            if(BindingContext is Student student && student.Students.Count > 0)
+            if (BindingContext is Student student && student.Students.Count > 0)
             {
                 Random random = new Random();
-                int id = random.Next(student.Students.Count);   
+                int id = random.Next(student.Students.Count);
                 var randomStudent = student.Students[id];
 
-                DisplayAlert("Losowanie", $"Wylosowany uczeń to {randomStudent.Name} {randomStudent.LastName} z klasy {randomStudent.StudentClass} o numerze {randomStudent.Number}", "OK");
+                DisplayAlert("Random Student", $"Selected: Name: {randomStudent.Name} Last Name: {randomStudent.LastName} No.{randomStudent.Number}", "OK");
+            }
+            else
+            {
+                DisplayAlert("Error", "List of students is empty.", "OK");
             }
         }
         catch (Exception ex)
         {
-            DisplayAlert("Błąd", $"Wystąpił problem podczas losowania ucznia: {ex.Message}", "OK");
-        }
-    }
-    private async void onImportListClicked(object sender, EventArgs e)
-    {
-        try
-        {
-            var result = await FilePicker.PickAsync(new PickOptions
-            {
-                FileTypes = TxtFileType
-            });
-
-            if (result != null)
-            {
-                string json = await File.ReadAllTextAsync(result.FullPath);
-
-                var importedStudents = JsonSerializer.Deserialize<List<StudentModel>>(json);
-
-                if (importedStudents != null && BindingContext is Student student)
-                {
-                    foreach (var newStudent in importedStudents)
-                    {
-                        student.Students.Add(newStudent);
-                        SaveStudents();
-                    }
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Błąd", $"Wystąpił problem podczas importowania: {ex.Message}", "OK");
-        }
-    }
-
-    private async void onExportListClicked(object sender, EventArgs e)
-    {
-        try
-        {
-            if (BindingContext is Student student)
-            {
-                string json = JsonSerializer.Serialize(student.Students.ToList());
-
-                var stream = new MemoryStream(Encoding.UTF8.GetBytes(json));
-
-                var result = await FileSaver.SaveAsync("students.txt", stream, new CancellationToken());
-
-                if (result.IsSuccessful)
-                {
-                    await DisplayAlert("Sukces", "Plik został zapisany.", "OK");
-                }
-                else
-                {
-                    await DisplayAlert("Błąd", $"Nie udało się zapisać pliku.", "OK");
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Błąd", $"Wystąpił problem podczas exportowania: {ex.Message}", "OK");
+            DisplayAlert("Error", $"An error occurred while selecting a student: {ex.Message}", "OK");
         }
     }
 
     private void onStudentRemoveClicked(object sender, EventArgs e)
     {
-        if(sender is Button button && button.BindingContext is StudentModel studentModel)
+        if (sender is Button button && button.BindingContext is StudentModel studentModel)
         {
-            if(BindingContext is Student student)
+            if (BindingContext is Student student)
             {
                 student.Students.Remove(studentModel);
                 SaveStudents();

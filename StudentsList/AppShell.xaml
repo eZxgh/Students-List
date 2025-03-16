@@ -6,13 +6,12 @@
     xmlns:local="clr-namespace:StudentsList"
     xmlns:views="clr-namespace:StudentsList.Views"
     Shell.FlyoutBehavior="Flyout"
-    Title="StudentsList">
+    Title="Students List">
 
     <TabBar>
         <ShellContent
             Title="Students List"
-            ContentTemplate="{DataTemplate views:StudentsView}"
+            ContentTemplate="{DataTemplate views:AddClassPage}"
             Route="MainPage" />
     </TabBar>
-
 </Shell>
