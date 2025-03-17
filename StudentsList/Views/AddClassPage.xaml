@@ -8,6 +8,15 @@
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout>
+            <Label 
+                StyleId="EnterClassNameLabel"
+                Text="Enter class name:"
+                   />
+            <Editor
+                StyleId="EnterClassNameInput"
+                Placeholder="Class name..."
+                x:Name="ClassName_Text"
+            />
             <Button
                 x:Name="addClassBtn"
                 StyleId="addClassBtn"
@@ -16,14 +25,14 @@
             <CollectionView x:Name="ClassListCollection"
                         ItemsSource="{Binding ClassContainer}"
                         SelectionMode="Single"
-                            SelectionChanged="ClassListCollection_SelectionChanged">
+                        SelectionChanged="onClassSelectedClicked">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="6"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout StyleId="classView">
-                            <Label StyleId="classNameLabel" Text="Class:" TextColor="black"/>
+                            <Label StyleId="classNameLabel" TextColor="black"/>
                             <Label Text="{Binding Name}" TextColor="black"/>
                         </StackLayout>
                     </DataTemplate>

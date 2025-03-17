@@ -3,16 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\masta\\source\\repos\\StudentsList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\views\\studentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\views\\studentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\resources\\styles\\addclasspage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\resources\\styles\\addclasspage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\resources\\styles\\studentview.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\resources\\styles\\studentview.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\masta\\AppData\\Local\\Temp\\.vsdbgsrc\\86724254f56af67fe578372b7449adf9c4b1e538\\Views_AddClassPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\views\\addclasspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\views\\addclasspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\views\\addclasspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\views\\addclasspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|c:\\users\\masta\\source\\repos\\studentslist\\studentslist\\views\\studentsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162C8B7A-7259-4D5F-9A1C-F2CD84D1DB2A}|StudentsList\\StudentsList.csproj|solutionrelative:studentslist\\views\\studentsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,41 +85,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\AppShell.xaml",
-              "RelativeDocumentMoniker": "StudentsList\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\AppShell.xaml",
-              "RelativeToolTip": "StudentsList\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-16T18:01:41.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentView.css",
-              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Resources\\Styles\\StudentView.css",
-              "RelativeDocumentMoniker": "StudentsList\\Resources\\Styles\\StudentView.css",
-              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Resources\\Styles\\StudentView.css",
-              "RelativeToolTip": "StudentsList\\Resources\\Styles\\StudentView.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-16T17:52:54.749Z",
-              "EditorCaption": ""
+              "Title": "Views_AddClassPage.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\masta\\AppData\\Local\\Temp\\.vsdbgsrc\\86724254f56af67fe578372b7449adf9c4b1e538\\Views_AddClassPage.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\86724254f56af67fe578372b7449adf9c4b1e538\\Views_AddClassPage.xaml.sg.cs",
+              "ToolTip": "C:\\Users\\masta\\AppData\\Local\\Temp\\.vsdbgsrc\\86724254f56af67fe578372b7449adf9c4b1e538\\Views_AddClassPage.xaml.sg.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\86724254f56af67fe578372b7449adf9c4b1e538\\Views_AddClassPage.xaml.sg.cs[Tylko do odczytu]",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T18:06:33.852Z",
+              "EditorCaption": "[Tylko do odczytu]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StudentsView.xaml",
-              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\StudentsView.xaml",
-              "RelativeDocumentMoniker": "StudentsList\\Views\\StudentsView.xaml",
-              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\StudentsView.xaml",
-              "RelativeToolTip": "StudentsList\\Views\\StudentsView.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAUAAAAAAAAAA==",
+              "Title": "AddClassPage.css",
+              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Resources\\Styles\\AddClassPage.css",
+              "RelativeDocumentMoniker": "StudentsList\\Resources\\Styles\\AddClassPage.css",
+              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Resources\\Styles\\AddClassPage.css",
+              "RelativeToolTip": "StudentsList\\Resources\\Styles\\AddClassPage.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-17T18:06:24.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\StudentsView.xaml.cs",
+              "RelativeDocumentMoniker": "StudentsList\\Views\\StudentsView.xaml.cs",
+              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\StudentsView.xaml.cs",
+              "RelativeToolTip": "StudentsList\\Views\\StudentsView.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T18:03:27.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddClassPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\AddClassPage.xaml.cs",
+              "RelativeDocumentMoniker": "StudentsList\\Views\\AddClassPage.xaml.cs",
+              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\AddClassPage.xaml.cs",
+              "RelativeToolTip": "StudentsList\\Views\\AddClassPage.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T17:27:48.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddClassPage.xaml",
+              "DocumentMoniker": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\AddClassPage.xaml",
+              "RelativeDocumentMoniker": "StudentsList\\Views\\AddClassPage.xaml",
+              "ToolTip": "C:\\Users\\masta\\source\\repos\\StudentsList\\StudentsList\\Views\\AddClassPage.xaml",
+              "RelativeToolTip": "StudentsList\\Views\\AddClassPage.xaml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-16T17:53:01.711Z",
+              "WhenOpened": "2025-03-17T17:19:49.852Z",
               "EditorCaption": ""
             }
           ]

@@ -18,9 +18,9 @@ public partial class AddClassPage : ContentPage
 
     private async void addClass_Clicked(object sender, EventArgs e)
     {
-		string className = await DisplayPromptAsync("Add class", "Name of class");
+        string className = ClassName_Text.Text;
 
-		if(!string.IsNullOrEmpty(className))
+        if (!string.IsNullOrEmpty(className))
 		{
             ClassModel newClass = new ClassModel 
             { 
@@ -28,11 +28,12 @@ public partial class AddClassPage : ContentPage
             };
 
             ClassContainer.Add(newClass);
+            ClassName_Text.Text = string.Empty;
             SaveClasses();
         }
 		else
 		{
-			await DisplayAlert("Error", "Enter class name.","OK");
+			await DisplayAlert("Error", "Name of class cannot be empty.","OK");
 		}
     }
 
@@ -56,7 +57,7 @@ public partial class AddClassPage : ContentPage
             }
             catch (Exception ex)
             {
-                DisplayAlert("Błąd", $"Failed to load classes: {ex.Message}", "OK");
+                DisplayAlert("Błąd", $"Loading classes failed: {ex.Message}", "OK");
             }
         }
     }
@@ -71,11 +72,11 @@ public partial class AddClassPage : ContentPage
         }
         catch(Exception ex)
         {
-            DisplayAlert("Error", $"Failed to save classes: {ex.Message}", "OK");
+            DisplayAlert("Error", $"Saving classes failed: {ex.Message}", "OK");
         }
     }
 
-    private async void ClassListCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void onClassSelectedClicked(object sender, SelectionChangedEventArgs e)
     {
         if(e.CurrentSelection.FirstOrDefault() is ClassModel selectedClass)
         {
