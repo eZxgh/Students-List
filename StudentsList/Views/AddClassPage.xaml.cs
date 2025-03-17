@@ -18,10 +18,10 @@ public partial class AddClassPage : ContentPage
 
     private async void addClass_Clicked(object sender, EventArgs e)
     {
-		string className = await DisplayPromptAsync("Add class", "Name of class");
+	string className = await DisplayPromptAsync("Add class", "Name of class");
 
-		if(!string.IsNullOrEmpty(className))
-		{
+	if(!string.IsNullOrEmpty(className))
+	{
             ClassModel newClass = new ClassModel 
             { 
                 Name = className
@@ -30,10 +30,10 @@ public partial class AddClassPage : ContentPage
             ClassContainer.Add(newClass);
             SaveClasses();
         }
-		else
-		{
-			await DisplayAlert("Error", "Enter class name.","OK");
-		}
+	else
+	{
+		await DisplayAlert("Error", "Enter class name.","OK");
+	}
     }
 
     private void LoadClasses()
