@@ -10,8 +10,8 @@ public partial class AddClassPage : ContentPage
     private readonly string _filePath = Path.Combine(FileSystem.AppDataDirectory, "classes.txt");
 
     public AddClassPage()
-	{
-		InitializeComponent();
+    {
+	InitializeComponent();
         BindingContext = this;
         LoadClasses();
     }
