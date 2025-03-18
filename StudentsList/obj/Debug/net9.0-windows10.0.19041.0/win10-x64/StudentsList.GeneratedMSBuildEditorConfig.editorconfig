@@ -64,11 +64,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Views.Student
 build_metadata.AdditionalFiles.TargetPath = Views\StudentsView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\StudentsView.xaml
 
-[C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/AddClassPage.css]
+[C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/AddClass.css]
 build_metadata.AdditionalFiles.GenKind = Css
-build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Styles.AddClassPage.css
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\AddClassPage.css
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\AddClassPage.css
+build_metadata.AdditionalFiles.ManifestResourceName = StudentsList.Resources.Styles.AddClass.css
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\AddClass.css
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\AddClass.css
 
 [C:/Users/masta/source/repos/StudentsList/StudentsList/Resources/Styles/StudentView.css]
 build_metadata.AdditionalFiles.GenKind = Css

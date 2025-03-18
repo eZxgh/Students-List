@@ -4,7 +4,7 @@
              x:Class="StudentsList.Views.AddClassPage"
              Title="List of Classes">
     <ContentPage.Resources>
-        <StyleSheet Source="../Resources/Styles/AddClassPage.css" />
+        <StyleSheet Source="../Resources/Styles/AddClass.css" />
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout>

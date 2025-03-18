@@ -18,19 +18,13 @@ public partial class AddClassPage : ContentPage
 
     private async void addClass_Clicked(object sender, EventArgs e)
     {
-<<<<<<< HEAD
         string className = ClassName_Text.Text;
-
+        
         if (!string.IsNullOrEmpty(className))
-		{
-=======
-	string className = await DisplayPromptAsync("Add class", "Name of class");
+        {
 
-	if(!string.IsNullOrEmpty(className))
-	{
->>>>>>> 0ecefbbb372a9ebe8cc89f15dc4c70346874349f
-            ClassModel newClass = new ClassModel 
-            { 
+            ClassModel newClass = new ClassModel
+            {
                 Name = className
             };
 
@@ -38,17 +32,10 @@ public partial class AddClassPage : ContentPage
             ClassName_Text.Text = string.Empty;
             SaveClasses();
         }
-<<<<<<< HEAD
-		else
-		{
-			await DisplayAlert("Error", "Name of class cannot be empty.","OK");
-		}
-=======
-	else
-	{
-		await DisplayAlert("Error", "Enter class name.","OK");
-	}
->>>>>>> 0ecefbbb372a9ebe8cc89f15dc4c70346874349f
+        else
+	    {
+            await DisplayAlert("Error", "Name of class cannot be empty.", "OK");
+        }
     }
 
     private void LoadClasses()
